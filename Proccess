@@ -1,0 +1,69 @@
+# Conky settings #
+background no
+update_interval 5
+override_utf8_locale yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+#imlib_cache_size 0
+temperature_unit celsius
+
+# Window specifications #
+own_window yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_transparent yes
+own_window_type desktop
+# Window specifications #
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 200 400
+maximum_width 520
+
+alignment top_right
+gap_x 5
+gap_y 50
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+default_color gray
+default_shade_color red
+default_outline_color green
+
+# Text settings #
+use_xft yes
+override_utf8_locale yes
+xftfont Pf Tempesta Five:bold:size=6
+xftalpha 0.9
+uppercase no
+
+temperature_unit celsius
+
+default_color 999999
+color0 d00420
+color1 d00420
+color2 1994D1
+#color3 1994D1  
+
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+TEXT
+${font Birch Std:size=18}${voffset 3}${color0}${voffset -1}PROSESS
+${font Pf Tempesta Five:bold:size=6}${voffset 3}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 1}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 1}${alignr}${top_mem mem 1}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 2}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 2}${alignr}${top_mem mem 2}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 3}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 3}${alignr}${top_mem mem 3}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 4}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 4}${alignr}${top_mem mem 4}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 5}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 5}${alignr}${top_mem mem 5}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 6}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 6}${alignr}${top_mem mem 6}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 7}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 7}${alignr}${top_mem mem 7}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 8}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 8}${alignr}${top_mem mem 8}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 9}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 9}${alignr}${top_mem mem 9}%${font}
+${font Pf Tempesta Five:bold:size=6}${voffset 1}${color1}${voffset -1}${font Pf Tempesta Five:bold:size=6}${color1}${offset 5}${top_mem name 10}${goto 120}${font Pf Tempesta Five:bold:size=6}${top_mem mem_res 10}${alignr}${top_mem mem 10}%${font}
