@@ -1,0 +1,60 @@
+# Conky settings #
+background no
+update_interval 1
+override_utf8_locale yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+#imlib_cache_size 0
+temperature_unit celsius
+
+# Window specifications #
+own_window yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_transparent yes
+own_window_type desktop
+# Window specifications #
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 180 400
+maximum_width 520
+
+alignment top_right
+gap_x 0
+gap_y 210
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+default_color gray
+default_shade_color red
+default_outline_color green
+
+# Text settings #
+use_xft yes
+override_utf8_locale yes
+xftfont Pf Tempesta Five:bold:size=6
+xftalpha 0.9
+uppercase no
+
+temperature_unit celsius
+
+default_color 999999
+color0 d00420
+color1 999999
+color2 1994D1
+#color3 1994D1 
+
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+TEXT
+${voffset 2}${font KG Arrows:size=17}${color0}w${voffset 1}${font Birch Std:size=18}${color0}${offset 30}Who is Connected to me${offset 30}${font KG Arrows:size=17}${color0}${voffset -5}x
+${voffset 5}${font Pf Tempesta Five:bold:size=6}${color0}${exec nmap -sP 192.168.1.1/24 | grep for | cut -d" " -f5}
