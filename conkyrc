@@ -1,0 +1,108 @@
+# Conky settings #
+background no
+update_interval 1
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+#imlib_cache_size 0
+temperature_unit celsius
+
+# Window specifications #
+own_window yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_transparent yes
+own_window_type desktop
+# Window specifications #
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 768 768
+maximum_width 520
+
+alignment top_right
+gap_x 50
+gap_y 33
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+default_color gray
+default_shade_color red
+default_outline_color green
+
+# Text settings #
+use_xft yes
+override_utf8_locale yes
+xftfont Pf Tempesta Five:bold:size=6
+xftalpha 0.9
+uppercase no
+
+temperature_unit celsius
+
+default_color 999999
+color0 d00420
+color1 d00420
+color2 1994D1
+#color3 1994D1 
+
+# Lua Load  ##${voffset 750}
+lua_load ~/.conky/MojArch/rings.lua
+#lua_draw_hook_pre ring_stats
+lua_draw_hook_pre conky_main
+
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+TEXT
+${font Pf Tempesta Five:bold:size=6}${voffset -1}${goto 160}${color1}${acpitemp} °C
+${font Pf Tempesta Five:bold:size=6}${voffset -1}${goto 128}${color1}CPU 1 ${alignr 330}${color1}${cpu cpu0}%
+${font Pf Tempesta Five:bold:size=6}${voffset 4}${goto 128}${color1}CPU 2 ${alignr 330}${color1}${cpu cpu1}%
+${font Pf Tempesta Five:bold:size=6}${voffset 4}${goto 128}${color1}CPU 3 ${alignr 330}${color1}${cpu cpu2}%
+${font Pf Tempesta Five:bold:size=6}${voffset 4}${goto 128}${color1}CPU 4 ${alignr 330}${color1}${cpu cpu3}%
+${font Pf Tempesta Five:bold:size=6}${voffset 4}${goto 128}${color1}CPU 5 ${alignr 330}${color1}${cpu cpu4}%
+${font Pf Tempesta Five:bold:size=6}${voffset 4}${goto 128}${color1}CPU 6 ${alignr 330}${color1}${cpu cpu5}%
+${font Pf Tempesta Five:bold:size=6}${voffset 4}${goto 128}${color1}CPU 7 ${alignr 330}${color1}${cpu cpu6}%
+${font Pf Tempesta Five:bold:size=6}${voffset 2}${goto 128}${color1}CPU 8 ${alignr 330}${color1}${cpu cpu7}%
+${font Birch Std:size=18}${color0}${goto 12}${voffset 42}CPU Core i7-2630QM
+${goto 45}${freq_g cpu0} Ghz
+${font Birch Std:size=18}${color0}${goto 400}${voffset 75}MEMORY
+${goto 370}${voffset -6}${font Pf Tempesta Five:bold:size=6}${color1}${top_mem name 1}${alignr 0}${top_mem mem 1}%
+${goto 370}${font Pf Tempesta Five:bold:size=6}${color1}${top_mem name 2}${alignr 0}${top_mem mem 2}%
+${goto 370}${font Pf Tempesta Five:bold:size=6}${color1}${top_mem name 3}${alignr 0}${top_mem mem 3}%
+${goto 370}${font Pf Tempesta Five:bold:size=6}${color1}${top_mem name 4}${alignr 0}${top_mem mem 4}%
+${goto 370}${font Pf Tempesta Five:bold:size=6}${color1}${top_mem name 5}${alignr 0}${top_mem mem 5}%
+${font Pf Tempesta Five:bold:size=6}${voffset 3}${goto 350}${color1}SWAP${alignr 30}${color1}${swap} / ${color1}${swapmax}
+${font Pf Tempesta Five:bold:size=6}${voffset 5}${goto 350}${color1}RAM ${alignr 30}${color1}${mem} / ${color1}${memmax}
+${font Pf Tempesta Five:bold:size=6}${goto 80}${voffset -62}Root${color1}${alignr 310}${fs_used /} / ${fs_size /}
+${font Pf Tempesta Five:bold:size=6}${goto 80}${voffset 2}Home${alignr 310}${color1}${fs_used /home/atrin} / ${fs_size /home/atrin}
+${font Pf Tempesta Five:bold:size=6}${goto 80}${voffset 1}Movie${alignr 310}${color1}${fs_used /run/media/atrin/Movie} / ${fs_size /run/media/atrin/Movie}
+${font Pf Tempesta Five:bold:size=6}${goto 80}${voffset 1}My${alignr 310}${color1}${fs_used /run/media/atrin/My} / ${fs_size /run/media/atrin/My}
+${font Pf Tempesta Five:bold:size=6}${goto 80}${voffset 1}Data${alignr 310}${color1}${fs_used /run/media/atrin/Data} / ${fs_size /run/media/atrin/Data}
+${font Birch Std:size=18}${color0}${goto 102}${voffset 12}HARD DRIVE
+${font Birch Std:size=18}${color0}${voffset -5}${goto 330}INTERNET INFO
+${font Birch Std:size=18}${goto 118}${voffset 25}${color0}${time %a}${time %b} ${color0}${time %x}
+${font Birch Std:size=22}${goto 145}${color1}${voffset 0}${time %H}:${time %M}:${time %S}
+${font Birch Std:size=18}${color0}${goto 300}${voffset 25}BATTERIE
+${font Birch Std:size=16}${color0}${goto 320}${voffset 5}${color1}${battery_percent BAT0}%
+${voffset -60}${font Birch Std:size=24}${color0}${voffset 70}${alignr 130}${offset 3}$USER  ${kernel} ${machine}
+${font Birch Std:size=24}${color0}${voffset 0}${alignr 200}$DESKTOP_SESSION
+# EDITION FINIR WLAN
+${voffset -85}${if_existing /proc/net/route wlo1}${font Pf Tempesta Five:bold:size=6}${color1}${goto 320}${voffset -135}WiFi${goto 350}${color1}${wireless_essid wlo1}${font Pf Tempesta Five:bold:size=6}${color1}${goto 300}${voffset 9}Up${goto 350}${color1}${totalup wlo1} / ${color1}${upspeed wlo1}
+${font Pf Tempesta Five:bold:size=6}${goto 300}${color1}Down${goto 350}${color1}${totaldown wlo1} / ${color1}${downspeed wlo1}
+#${font Pf Tempesta Five:bold:size=7}${goto 300}${voffset 2}Local IP${goto 370}${addr wlo1}
+#${font Pf Tempesta Five:bold:size=7}${goto 300}${voffset -1}Public IP${goto 370}${execi 3600 wget -q -O - checkip.dyndns.org | sed -e 's/[^[:digit:]\|.]//g'}
+# |--ETH0
+${else}${if_existing /proc/net/route eth0}${font Pf Tempesta Five:bold:size=6}${color1}${goto 300}${voffset -6}Up${goto 350}${color1}${totalup wlo1} / ${color1}${upspeed wlo1}
+${font Pf Tempesta Five:bold:size=6}${goto 300}${color1}Down${goto 350}${color1}${totaldown wlo1} / ${color1}${downspeed wlo1}
+${font Pf Tempesta Five:bold:size=7}${goto 300}${voffset 2}Local IP${goto 370}${addr eth0}
+${font Pf Tempesta Five:bold:size=7}${goto 300}${voffset -1}Public IP${goto 370}${execi 3600 wget -q -O - checkip.dyndns.org | sed -e 's/[^[:digit:]\|.]//g'}%${endif}${endif}
+#${font Pf Tempesta Five:bold:size=6}${goto 180}Uptime${color1}${alignr 100}${uptime_short}
